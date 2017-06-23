@@ -3,7 +3,7 @@
   "https_only": true,
   "headers": {
     "/": {
-      "strict-transport-security": "max-age=31557600; preload",
+      "strict-transport-security": "max-age=31557600; preload"
     }
   }
 }
