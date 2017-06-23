@@ -9,7 +9,7 @@
   "scripts": {
     "build": "ember build --environment=production",
     "start": "ember server --proxy=https://node-hnapi.herokuapp.com",
-    "start:prod": "ember serve --environment=production --proxy=https://node-hnapi.herokuapp.com --live-reload=false",
+    "start:prod": "ember serve --environment=production --proxy=https://node-hnapi.herokuapp.com --live-reload=false --port=$PORT",
     "test": "ember test",
     "bench": "node ./benching/index.js",
     "serve": "node --expose-gc ./benching/server.js"
@@ -33,7 +33,7 @@
     "typescript": "^2.2.2"
   },
   "engines": {
-    "node": ">= 4.0"
+    "node": ">= 6"
   },
   "private": true,
   "dependencies": {
