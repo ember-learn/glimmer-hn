@@ -59,7 +59,7 @@ export default class GlimmerHn extends Component {
     }
 
     if (this.commentsCache[id] === undefined) {
-      window['fetch'](`/item/${id}`).then(result => result.json()).then(data => {
+      window['fetch'](`https://node-hnapi.herokuapp.com/item/${id}`).then(result => result.json()).then(data => {
         this.comments = this.commentsCache[id] = data.comments;
         delete data.comments;
         this.currentArticle = this.articleCache[id] = data;
@@ -73,7 +73,7 @@ export default class GlimmerHn extends Component {
       api = 'news'
     }
 
-    let endpoint = `/${api}`;
+    let endpoint = `https://node-hnapi.herokuapp.com/${api}`;
 
     if (this.cache[endpoint] !== undefined) {
       this.results = this.cache[endpoint];

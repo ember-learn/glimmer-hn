@@ -8,12 +8,11 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
-    "start": "ember server --proxy=https://node-hnapi.herokuapp.com",
-    "start:prod": "ember serve --environment=production --proxy=https://node-hnapi.herokuapp.com --live-reload=false --port=$PORT",
+    "start": "ember server",
+    "start:prod": "ember serve --environment=production --live-reload=false --port=$PORT",
     "test": "ember test",
     "bench": "node ./benching/index.js",
-    "serve": "node --expose-gc ./benching/server.js",
-    "heroku-prebuild": "npm i -g ember-cli@github:ember-cli/ember-cli"
+    "serve": "node --expose-gc ./benching/server.js"
   },
   "engines": {
     "node": "6"
