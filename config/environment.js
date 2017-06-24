@@ -6,5 +6,12 @@ module.exports = function(environment) {
     environment: environment
   };
 
-  return ENV;
+  ENV.serviceWorker = {
+    enabled: true,
+    networkFirstURLs: [
+      /node-hnapi\.herokuapp\.com/
+    ]
+  }
+
+    return ENV;
 };

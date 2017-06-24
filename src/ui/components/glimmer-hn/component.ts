@@ -79,10 +79,10 @@ export default class GlimmerHn extends Component {
       this.results = this.cache[endpoint];
     } else {
       window['fetch'](endpoint).then((result) => result.json()).then((data) => {
-        this.results = this.cache[endpoint] = data;
-
-        data.forEach((article) => {
+        this.results = this.cache[endpoint] = data.map((article) => {
           this.articleCache[article.id] = article;
+          article.isUserAvailable = !!article.user;
+          return article;
         });
       });
     }

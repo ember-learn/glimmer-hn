@@ -19,6 +19,7 @@ module.exports = function(defaults) {
     },
     fingerprint: {
       exclude: ['images/glimmer-192x192'],
+      prepend: '/'
     }
   });
 
